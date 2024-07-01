@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: eye-tracking-service
+    env: docker
+    plan: free
+    repo: https://github.com/AlikoGrace/eye-tracking-model-docker.git
+    branch: main
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: FLASK_ENV
+        value: production
